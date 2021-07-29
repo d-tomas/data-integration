@@ -14,6 +14,7 @@ The following Python libraries are required:
 * python-Levenshtein (https://pypi.org/project/python-Levenshtein/)
 * scipy (https://pypi.org/project/scipy/)
 * gensim (https://pypi.org/project/gensim/)
+* transformers (https://pypi.org/project/transformers/)
 
 The pre-trained models are available in the following links:
 
@@ -46,13 +47,15 @@ models = ./models
 tables = ./tables
 
 [Files]
-output = ./similarity_data.json
+output = ./similarity.json
 
 [Models]
-wikitables_names = wikitables_names.bin
-wikitables_contents = wikitables_contents.bin
+wikitables_names = wikitables_names
+wikitables_contents = wikitables_contents
 google = GoogleNews-vectors-negative300.bin
 fasttext = wiki-news-300d-1M.vec
+bert = bert-base-uncased
+roberta = roberta-base
 ```
 
 This example uses *fastText* for both column names ("model_names") and content ("model_content"). The parameter alpha is set to "0.5" and the results are stored in a file named "similarity.json".
