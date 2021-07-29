@@ -68,8 +68,8 @@ $ python table_similarity.py
 
 ## Authors
 
-* **David Tomás** 
-* **José Pilaluisa** 
-* **Borja Navarro-Colorado** 
-* **Jose-Norberto Mazón** 
+* David Tomás
+* José Pilaluisa
+* Borja Navarro-Colorado
+* Jose-Norberto Mazón
 
