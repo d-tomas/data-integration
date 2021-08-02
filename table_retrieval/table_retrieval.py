@@ -104,7 +104,7 @@ def main():
     
     # Load configuration from file
     config = configparser.ConfigParser()
-    config.read('config_retrieval.ini')
+    config.read('config.ini')
 
     task = config['Setup']['task'] # Retrieval task. Valid values are: "union_retrieval" and "join_retrieval"
     n = int(config['Setup']['n'])  # Number of tables to retrieve for each query
