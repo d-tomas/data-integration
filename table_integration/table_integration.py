@@ -92,21 +92,22 @@ def calculate_union(dict_similarity, threshold):
 
 def calculate_join(dict_similarity, threshold):
     """
-    Identify the columns between two tables that match in a join operation
+    Identify tables that can be joined (there is at least one pair of columns with a similarity above the threshold)
 
     :param dict_similarity: dictionary where keys are table names and content is a list of column pairs and their similarity
-    :param threshold: cut-off similarity threshold to decide if join can be applied to a pair of columns
-    :return: dictionary with the columns that can be part of a join for each pair of tables
+    :param threshold: cut-off similarity threshold to decide if two tables can be joined
+    :return: dictionary with the pair of columns used to join each pair of tables (where possible)
     """
     dict_join = {}
     for table_1 in dict_similarity:
-        dict_join[table_1] = {}
         for table_2 in dict_similarity[table_1]:
-            dict_join[table_1][table_2] = []
-            for column_pair in dict_similarity[table_1][table_2]:
-                if column_pair[2] >= threshold:
-                    if not contained(dict_join[table_1][table_2], column_pair):
-                        dict_join[table_1][table_2].append(column_pair)
+            # Check only the pair of columns with the maximum similarity
+            if dict_similarity[table_1][table_2][0][2] >= threshold:
+                dict_join[table_1] = {}
+                dict_join[table_1][table_2] = dict_similarity[table_1][table_2][0]
+                continue
+            else:
+                break
 
     return dict_join
 
