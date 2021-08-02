@@ -138,13 +138,11 @@ Again, the module reads the parameters from a configuration file (`config.ini`).
 ```
 [Setup]
 task = union
-
-[Directories]
-tables = ./tables
+threshold = 0.8
 
 [Files]
 tables_similarity = ./similarity.json
-output = ./integration.json
+output = ./union.json
 ```
 
 This example performs the union operation. For each pair of tables, the program will return the columns that will be matched in a *union* operation. The results are stored in the file `integration.json`.
