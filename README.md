@@ -20,7 +20,7 @@ The following Python libraries are required:
 * [gensim](https://pypi.org/project/gensim/)
 * [transformers](https://pypi.org/project/transformers/)
 
-To install them, check that `pip` package-management system is present in your system. Otherwise install it following this [instructions](https://pip.pypa.io/en/stable/installing/).
+To install them, check that `pip` package-management system is present in your system. Otherwise install it following this [instructions](https://pip.pypa.io/en/stable/installation/).
 
 Then run the following command:
 
