@@ -99,9 +99,6 @@ def get_total_similarity_join(list_columns):
 
 
 def main():
-    global column_positives
-    global column_negatives
-    
     # Load configuration from file
     config = configparser.ConfigParser()
     config.read('config.ini')
