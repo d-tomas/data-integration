@@ -108,7 +108,7 @@ def main():
 
     task = config['Setup']['task']  # Retrieval task. Valid values are: "union_retrieval" and "join_retrieval"
     n = int(config['Setup']['n'])  # Number of tables to retrieve for each query
-    dir_tables = config['Directories']['tables']  # Directory with all the tables and the file with the matching columns information
+    dir_tables = config['Directories']['tables']  # Directory with all the tables
     tables_similarity = config['Files']['tables_similarity']  # File with tables similarity
     output_file = config['Files']['output']  # Output file to store the tables retrieved in JSON format
 
