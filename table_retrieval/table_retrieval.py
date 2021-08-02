@@ -106,7 +106,7 @@ def main():
     config = configparser.ConfigParser()
     config.read('config.ini')
 
-    task = config['Setup']['task'] # Retrieval task. Valid values are: "union_retrieval" and "join_retrieval"
+    task = config['Setup']['task']  # Retrieval task. Valid values are: "union_retrieval" and "join_retrieval"
     n = int(config['Setup']['n'])  # Number of tables to retrieve for each query
     dir_tables = config['Directories']['tables']  # Directory with all the tables and the file with the matching columns information
     tables_similarity = config['Files']['tables_similarity']  # File with tables similarity
