@@ -87,7 +87,7 @@ def calculate_union(dict_similarity, threshold):
                     if not contained(dict_union[table_1][table_2], column_pair):
                         dict_union[table_1][table_2].append(column_pair)
             if not dict_union[table_1][table_2]:
-                del dict_union[table_1][table_2]
+                del dict_union[table_1][table_2]  # Store only tables that can be joined
 
     return dict_union
 
